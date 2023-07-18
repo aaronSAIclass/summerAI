@@ -1,1 +1,55 @@
 Hello World
+
+import java.util.Scanner;
+public class main{
+    public static void (String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a number of hours!);
+        double hours = scan.nextDouble();
+        double minutes = hours * 60;
+        System.out.println(minutes + " minutes.");
+
+        boolean convertH = true;
+        System.out.println("Convert minutes to hours, or hours to minutes? Type 1 for minutes to hours, and 2 for hours to minutes.");
+        int answer = scan.nextInt();
+        switch (answer) {
+            case 1:
+                convertH = true;
+                break;
+            case 2:
+                convertH = false;
+                break;
+            default: 
+                System.out.println("Answer not recognized. defaulting to minutes to hours.");
+                convertH = true;
+                break;
+        }            
+        if(convertH = true){
+            System.out.println("Enter minutes");
+            double ans = scan.nextDouble();
+            double provide = ans/60;
+            System.out.println(provide + " hours.");
+        } else {
+            System.out.println("Enter hours");
+            double ans2 = scan.nextDouble();
+            double provide2 = ans2*60;
+            System.out.println(provide2 + " minutes.");
+        }
+
+        System.out.println("Enter a string!");
+        String next = scan.nextLine();
+        int cool = 0;
+        for (int i = 0; i < next.length(), i++){
+            if(next.substring(i, i+1).equals(" ")){
+            } else {
+                cool++;
+            }
+        }
+
+        System.out.println("Your word is " + cool + " letters long");
+    }
+
+}
+
+
+
